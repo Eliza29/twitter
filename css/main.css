@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding:0; 
+  box-sizing: border-box;
+}
+header {
+    background-color: #00ccff;
+    height:10vh;  
+    width: 100%;
+    margin-bottom: 1vh;
+}
+h1{
+   color: #ffffff;
+   text-align: center;
+}
+
+body{
+   background-image: url("../assets/images/taipei.jpg");
+   background-size:cover;
+   width: 100%;
+}
+section{
+    position: relative;
+}
+#fixed-box{
+    background-color: #ffffff;
+    position: absolute;    
+    left: 20vh;
+    top: 1vh;
+    padding: 10px;
+    height: 30vh;
+    width: 80vh;
+}
+#mobile-box{
+    background-color: #ffffff;       
+    width: 79.5vh;    
+    position: absolute;
+    top:1vh;
+    right: 20vh;
+}
+textarea{
+    border-right: none;
+    resize: none;
+    display: inline;
+    padding: 5px;
+    
+}
+button{
+    background-color: #6ad2f3;
+    border: none;
+    color: #ffffff;
+    padding: 5px 10px;
+    margin: 10px 5px;
+}
+.styleDiv {
+    background:#ffffff;
+    border-radius: 5px;
+    display: inline-block; 
+    position: relative;
+    left: 132px;
+    top: 250px;
+    width: 80.6%;
+    margin-bottom: 10px;
+    padding: 12px 7px;
+}
