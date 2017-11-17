@@ -38,7 +38,7 @@ hr{
 }
 #mobile-box{
     background-color: #ffffff;       
-    width: 79.5vh;    
+    width: 80vh;    
     position: absolute;
     top:1vh;
     right: 20vh;
@@ -47,7 +47,8 @@ textarea{
     border-right: none;
     resize: none;
     display: inline;
-    padding: 5px;    
+    padding: 5px;
+    width: 80vh;    
 }
 
  button{
@@ -69,4 +70,10 @@ textarea{
     width: 80.6%;
     margin-bottom: 10px;
     padding: 12px 7px;
+}
+.styleCount {
+    color:rgb(228, 58, 228);
+}
+.styleCount2 {
+    color:rgb(13, 158, 216);
 }
