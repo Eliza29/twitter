@@ -3,18 +3,14 @@ Versión 0.0.2
 
 No ingresar texto vacío (deshabilitar el botón de "twittear").
 Contar la cantidad de caracteres de forma regresiva.
-tweetButton.addEventListener('click',disableButton)
-   function disableButton(){
-       do{
-        tweetButton.disabled = true;    
-       }while(!twitterArea.value);       
-}
 */
-window.addEventListener('load',function(){
 
+window.addEventListener('load',function(){
+   
 
 var twitterArea = document.getElementById('twitter-area');
 var tweetButton = document.getElementById('tweet-button');
+tweetButton.disabled = true;
 
 tweetButton.addEventListener('click',addText)
    
@@ -40,6 +36,7 @@ function counter(){
     var count = 140;
     count = 140-twitterArea.value.length; 
     counterBox.textContent= count;   
+   //crear condicion para desabilitar 
 }
 
 });    
