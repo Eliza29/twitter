@@ -25,6 +25,7 @@ window.addEventListener('load', function() {
       saveText.textContent = twitterArea.value;  
         
       newDiv.classList.add('styleDiv');
+      saveText.classList.add('save');
     }
   }
 
@@ -40,7 +41,7 @@ window.addEventListener('load', function() {
     if (twitterArea.value.length >= 1) {
       tweetButton.disabled = false;
     } 
-    if (twitterArea.value.length > 120 && twitterArea.value.length < 130) {
+    if (twitterArea.value.length > 120 && twitterArea.value.length <= 130) {
       counterBox.className = 'styleCount';   
     }
     else if (twitterArea.value.length > 130 && twitterArea.value.length < 140) {

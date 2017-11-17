@@ -1,8 +1,12 @@
+/*Estilos del proyecto*/
 * {
   margin: 0;
   padding:0; 
   box-sizing: border-box;
 }
+/*
+encabezado de header
+*/
 header {
     background-color: #00ccff;
     height:10vh;  
@@ -14,7 +18,7 @@ h1{
    color: #ffffff;
    text-align: center;
 }
-
+/*estilos del cuerpo*/
 body{
    background-image: url("../assets/images/taipei.jpg");
    background-size:cover;
@@ -23,6 +27,7 @@ body{
 section{
     position: relative;
 }
+/*Caja de Texto*/
 #fixed-box{
     background-color: #ffffff;
     line-height: 1.6;
@@ -36,6 +41,7 @@ section{
 hr{
     margin: 18px 0px;
 }
+/*Caja de Texto movil*/
 #mobile-box{
     background-color: #ffffff;       
     width: 80vh;    
@@ -59,7 +65,7 @@ textarea{
     padding: 10px 17px;
     margin: 10px 5px;
 } 
-
+/*Añadiendo estilo del nuevo div*/
 .styleDiv {
     background:#ffffff;
     border-radius: 5px;
@@ -70,7 +76,15 @@ textarea{
     width: 80.6%;
     margin-bottom: 10px;
     padding: 12px 7px;
+    height: auto;
 }
+.save {
+    display: inline-block;
+    width: 80.6%;
+    height:auto; 
+       
+}
+/*Colores del contador*/
 .styleCount {
     color:rgb(228, 58, 228);
 }
