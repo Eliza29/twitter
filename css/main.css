@@ -7,6 +7,7 @@ header {
     background-color: #00ccff;
     height:10vh;  
     width: 100%;
+    padding: 1vh;
     margin-bottom: 1vh;
 }
 h1{
@@ -24,12 +25,16 @@ section{
 }
 #fixed-box{
     background-color: #ffffff;
+    line-height: 1.6;
     position: absolute;    
     left: 20vh;
     top: 1vh;
-    padding: 10px;
+    padding: 30px 20px 10px;
     height: 30vh;
     width: 80vh;
+}
+hr{
+    margin: 18px 0px;
 }
 #mobile-box{
     background-color: #ffffff;       
@@ -42,16 +47,17 @@ textarea{
     border-right: none;
     resize: none;
     display: inline;
-    padding: 5px;
-    
+    padding: 5px;    
 }
 button{
     background-color: #6ad2f3;
     border: none;
+    border-radius: 4px;
     color: #ffffff;
-    padding: 5px 10px;
+    padding: 10px 17px;
     margin: 10px 5px;
 }
+
 .styleDiv {
     background:#ffffff;
     border-radius: 5px;

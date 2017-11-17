@@ -1,10 +1,14 @@
 /*
-Versión 0.0.1
+Versión 0.0.2
 
-Diseñar un formulario que permita ingresar un texto y un botón para "twittear".
-Agregar un evento de click al botón o de submit al formulario.
-En el evento, obtener el texto.
-Agregar el texto al HTML.
+No ingresar texto vacío (deshabilitar el botón de "twittear").
+Contar la cantidad de caracteres de forma regresiva.
+tweetButton.addEventListener('click',disableButton)
+   function disableButton(){
+       do{
+        tweetButton.disabled = true;    
+       }while(!twitterArea.value);       
+}
 */
 window.addEventListener('load',function(){
 
@@ -13,9 +17,9 @@ var twitterArea = document.getElementById('twitter-area');
 var tweetButton = document.getElementById('tweet-button');
 
 tweetButton.addEventListener('click',addText)
-   function addText(){    
+   
+  function addText(){    
     if(twitterArea){
-
         var parentDiv = document.getElementsByTagName('section')[0];
         var newDiv = document.createElement('div');
         var saveText = document.createElement('p');
@@ -26,6 +30,16 @@ tweetButton.addEventListener('click',addText)
         
         newDiv.classList.add('styleDiv')
     }
+}
+
+twitterArea.addEventListener('keyup',counter)
+
+function counter(){
+    
+    var counterBox = document.getElementsByTagName('span')[0];
+    var count = 140;
+    count = 140-twitterArea.value.length; 
+    counterBox.textContent= count;   
 }
 
 });    
