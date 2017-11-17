@@ -40,17 +40,14 @@ window.addEventListener('load', function() {
     if (twitterArea.value.length >= 1) {
       tweetButton.disabled = false;
     } 
-    if (twitterArea.value.length > 120 && twitterArea.value.length <= 130) {
+    if (twitterArea.value.length > 120 && twitterArea.value.length < 130) {
       counterBox.className = 'styleCount';   
     }
-    else if (twitterArea.value.length > 130 && twitterArea.value.length <= 140) {
+    else if (twitterArea.value.length > 130 && twitterArea.value.length < 140) {
       counterBox.className = 'styleCount2';
     }
-    
-    /*
-    if (twitterArea.value.length > 120){
-        counterBox.classList.add('styleCount')
+    else {
+      counterBox.className = 'styleCount3';
     }
-    */
   }
 });    
