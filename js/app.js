@@ -26,6 +26,7 @@ window.addEventListener('load', function() {
         
       newDiv.classList.add('styleDiv');
       saveText.classList.add('save');
+      twitterArea.value = '';
     }
   }
 
@@ -37,7 +38,7 @@ window.addEventListener('load', function() {
     var count = 140;
     count = 140 - twitterArea.value.length; 
     counterBox.textContent = count;   
-    // crear condicion para habilitar
+    // habilitando el boton
     if (twitterArea.value.length >= 1) {
       tweetButton.disabled = false;
     } 
@@ -50,5 +51,17 @@ window.addEventListener('load', function() {
     else {
       counterBox.className = 'styleCount3';
     }
+  } 
+  twitterArea.addEventListener('keyup',disableButton);
+  function disableButton(){
+    var textLength = twitterArea.value.length
+    if(textLength > 140){
+        tweetButton.disabled = true;
+        tweetButton.classList.add('buttonDisable');
+    }
+    else if (textLength >= 1 && textLength<= 140) {
+      tweetButton.className ='tweet';
+    }
   }
+
 });    

@@ -4,9 +4,8 @@
   padding:0; 
   box-sizing: border-box;
 }
-/*
-encabezado de header
-*/
+/* encabezado */
+
 header {
     background-color: #00ccff;
     height:10vh;  
@@ -18,7 +17,7 @@ h1{
    color: #ffffff;
    text-align: center;
 }
-/*estilos del cuerpo*/
+/*estilos del cuerpo o contenido */
 body{
    background-image: url("../assets/images/taipei.jpg");
    background-size:cover;
@@ -57,7 +56,7 @@ textarea{
     width: 80vh;    
 }
 
- button{
+.tweet{
     background-color: #6ad2f3;
     border: none;
     border-radius: 4px;
@@ -65,6 +64,14 @@ textarea{
     padding: 10px 17px;
     margin: 10px 5px;
 } 
+.buttonDisable {
+    background-color: rgba(128, 128, 128, 0.096);
+    border: none;
+    border-radius: 4px;
+    color: rgb(92, 91, 91);
+    padding: 10px 17px;
+    margin: 10px 5px;
+}
 /*Añadiendo estilo del nuevo div*/
 .styleDiv {
     background:#ffffff;
