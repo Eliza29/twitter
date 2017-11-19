@@ -48,12 +48,16 @@ hr{
     top:1vh;
     right: 20vh;
 }
-textarea{
+.big-box{
+    height: 130px;
+}
+.normal-box{
     border-right: none;
     resize: none;
-    display: inline;
+    display: inline-block;
     padding: 5px;
-    width: 80vh;    
+    width: 80vh;
+    overflow: hidden;    
 }
 
 .tweet{

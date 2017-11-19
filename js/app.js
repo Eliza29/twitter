@@ -1,19 +1,17 @@
 /*
-Versión 0.0.3
-Si pasa los 140 caracteres, deshabilitar el botón.
-Si pasa los 120 caracteres, mostrar el contador con OTRO color.
-Si pasa los 130 caracteres, mostrar el contador con OTRO color.
-Si pasa los 140 caracteres, mostrar el contador en negativo.
+Versión 0.0.4
+Al presionar enter(/n) que crezca el textarea 
+de acuerdo al tamaño del texto.
 */
 
 window.addEventListener('load', function() {
-   
+  /* creando variables */
   var twitterArea = document.getElementById('twitter-area');
   var tweetButton = document.getElementById('tweet-button');
   tweetButton.disabled = true;
-
-  tweetButton.addEventListener('click', addText)
-   
+  
+  /* Añadiendo un parrafo y un texto */
+  tweetButton.addEventListener('click', addText) 
   function addText() {    
     if (twitterArea) {
       var parentDiv = document.getElementsByTagName('section')[0];
@@ -29,7 +27,7 @@ window.addEventListener('load', function() {
       twitterArea.value = '';
     }
   }
-
+  /* Añadiendo el contador de caracteres */
   twitterArea.addEventListener('keyup', counter);
 
   function counter() {
@@ -38,20 +36,21 @@ window.addEventListener('load', function() {
     var count = 140;
     count = 140 - twitterArea.value.length; 
     counterBox.textContent = count;   
-    // habilitando el boton
+    /* habilitando el boton */
     if (twitterArea.value.length >= 1) {
       tweetButton.disabled = false;
     } 
     if (twitterArea.value.length > 120 && twitterArea.value.length <= 130) {
       counterBox.className = 'styleCount';   
     }
-    else if (twitterArea.value.length > 130 && twitterArea.value.length < 140) {
+    else if (twitterArea.value.length > 130){
       counterBox.className = 'styleCount2';
     }
     else {
       counterBox.className = 'styleCount3';
     }
   } 
+  /* Desabilitando boton tweet */
   twitterArea.addEventListener('keyup',disableButton);
   function disableButton(){
     var textLength = twitterArea.value.length
@@ -59,8 +58,24 @@ window.addEventListener('load', function() {
         tweetButton.disabled = true;
         tweetButton.classList.add('buttonDisable');
     }
-    else if (textLength >= 1 && textLength<= 140) {
+    else if (textLength >= 1 && textLength <= 140) {
       tweetButton.className ='tweet';
+    }
+  }
+  /* haciendo crecer el box */
+  twitterArea.addEventListener('keyup', changeSize);
+
+  function changeSize(){
+    var textLength = twitterArea.value.length
+    var enterSpace = /\n/;
+    if(textLength >= 350){
+      twitterArea.classList.add('big-box'); 
+    }
+    else if (textLength < 350){
+      twitterArea.className = 'normal-box';
+    }
+    else if (twitterArea.value = enterSpace){
+      twitterArea.classList.add('big-box'); 
     }
   }
 
