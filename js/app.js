@@ -5,6 +5,7 @@ de acuerdo al tamaño del texto.
 */
 
 window.addEventListener('load', function() {
+  moment.locale('es');
   /* creando variables */
   var twitterArea = document.getElementById('twitter-area');
   var tweetButton = document.getElementById('tweet-button');
@@ -17,9 +18,13 @@ window.addEventListener('load', function() {
       var parentDiv = document.getElementsByTagName('section')[0];
       var newDiv = document.createElement('div');
       var saveText = document.createElement('p');
+      //añadiendo hora
+      var time = document.createElement('p');
         
       parentDiv.appendChild(newDiv);
       newDiv.appendChild(saveText); 
+      newDiv.appendChild(time);
+      time.textContent = moment().format('LT');; 
       saveText.textContent = twitterArea.value;  
         
       newDiv.classList.add('styleDiv');
@@ -78,5 +83,6 @@ window.addEventListener('load', function() {
       twitterArea.classList.add('big-box'); 
     }
   }
+  
 
 });    
