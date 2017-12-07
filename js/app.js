@@ -19,22 +19,25 @@ window.addEventListener('load', function() {
       var newDiv = document.createElement('div');
       var saveText = document.createElement('p');
       //añadiendo hora
-      var time = document.createElement('p');
-        
+      var time = document.createElement('div');
+      
+      newDiv.classList.add('styleDiv');
+      saveText.classList.add('save');
+      time.classList.add('time')
+
       parentDiv.appendChild(newDiv);
       newDiv.appendChild(saveText); 
       newDiv.appendChild(time);
-      time.textContent = moment().format('LT');; 
+      time.textContent = moment().format('HH:mm');; 
       saveText.textContent = twitterArea.value;  
         
-      newDiv.classList.add('styleDiv');
-      saveText.classList.add('save');
+      
       twitterArea.value = '';
     }
   }
   /* Añadiendo el contador de caracteres */
   twitterArea.addEventListener('keyup', counter);
-
+  
   function counter() {
     
     var counterBox = document.getElementsByTagName('span')[0];

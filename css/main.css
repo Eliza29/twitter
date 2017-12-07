@@ -7,7 +7,7 @@
 /* encabezado */
 
 header {
-    background-color: #00ccff;
+    background-color: #05bbe9;
     height:10vh;  
     width: 100%;
     padding: 1vh;
@@ -19,7 +19,7 @@ h1{
 }
 /*estilos del cuerpo o contenido */
 body{
-   background-image: url("../assets/images/taipei.jpg");
+   background-image: url("../assets/images/colibri1.jpg");
    background-size:cover;
    width: 100%;
 }
@@ -76,6 +76,9 @@ hr{
     padding: 10px 17px;
     margin: 10px 5px;
 }
+button:hover{
+    cursor: pointer;
+}
 /*Añadiendo estilo del nuevo div*/
 .styleDiv {
     background:#ffffff;
@@ -104,4 +107,10 @@ hr{
 }
 .styleCount3{
     color: black;
+}
+
+.time {
+  margin:  10px 0;
+  color: rgb(0, 110, 255);
+
 }
