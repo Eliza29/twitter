@@ -1,7 +1,10 @@
 # RETO DE CODIGO
 ## TWITTER
 ### Introducción
-El proyecto consistio en elaborar una replica del newsfeed de Twitter.
+El proyecto consistio en elaborar una replica del newsfeed de Twitter usando js, css y html.
+
+### Contenido
+![twitter](assets/images/twitter-foto.png)
 
 *Versión 0.0.1*
 
